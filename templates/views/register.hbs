@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="css/style.css">
+  <title>Registration Page</title>
+  <script type="text/javascript">
+  {
+	if(!(signup.Name.value||signup.Email.value||signup.Passsword.value)){
+		alert("Please fill the field");
+		return(false);
+    }
+        
+	passwordcheck();
+  }
+    function passwordcheck()
+  {
+	
+        if(signup.Password.value.length<7){
+		alert("Password must have atleast 8 characters");
+		return(false);
+        }
+	
+	return(true);
+  }
+	</script>
+  
+
+</head>
+<body>
+
+<h2>INNERVE'22 REGISTRATION</h2>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form action="/register" method="POST" name="signup">
+			<h1>Create Account</h1>
+			
+			<br>
+			<br>
+			<input type="text"  placeholder="Full Name" name="Name" required />
+			<input type="email" placeholder="Email" name="Email" required/>
+			<input type="password" placeholder="Password" name="Password"  required/ minlength="7">
+			<button value="send" onclick="check()">Register</button>
+		</form>
+	</div>
+	
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn"><a href="/login">Sign In</a></button>
+			</div>
+			
+		</div>
+	</div>
+	</div>
+
+
+<footer>
+	<p>
+		Connect with us on: 
+        <a target="_blank" href="https://www.instagram.com/innerveigdtuw/?hl=en">Instagram </a>
+        <a target="_blank" href="https://www.linkedin.com/company/innerve/?originalSubdomain=in">LinkedIn </a>
+        <a target="_blank" href="https://twitter.com/innerveigdtuw">Twitter </a>
+        
+		
+	</p>
+</footer>
+ <script  src="js/script.js"></script>
+
+</body>
+</html>
